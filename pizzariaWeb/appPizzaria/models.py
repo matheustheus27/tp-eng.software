@@ -65,6 +65,7 @@ class Item(models.Model):
     drink = models.ForeignKey(Drink, on_delete=models.CASCADE, null=True, default=None)
     promotion = models.ForeignKey(Promotion, on_delete=models.CASCADE, null=True, default=None)
     amount = models.IntegerField()
+    price = models.FloatField()
 
 class ShoppingCart(models.Model):
     items = models.ManyToManyField(Item)
